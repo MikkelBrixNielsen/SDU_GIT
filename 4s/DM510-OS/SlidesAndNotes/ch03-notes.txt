@@ -1,0 +1,113 @@
+what are system and user goals:
+-
+-
+-
+
+different types of system calls:
+- program execution 
+- file managment 
+- graphics
+
+Difference between policy and mechanism:
+- policy: what has to be done 
+- mechanism: how is it done
+
+Different types of communication between processes:
+- shared memory communication
+- direct messsaging (micro kernels)
+
+kernel instrumentation (live debugging activating probes - kernel break points)
+- count thing 
+- interrupt when a key is pressed
+- etc...
+
+Process states:
+- new 
+- ready (want to go to the CPU)
+- waiting
+- running (waiting or running on the CPU)
+- terminated
+
+
+
+
+
+
+
+A context switch can be more expensive than just straight op waiting an letting the CPU idle
+
+- short term schedualing: what process will go on the processor core next needs to be very fast
+not necesarily the most optimal but very fast at readying process for the cpu.
+
+- long term schedualing: decides what process will be readied to be put on the cpu on some point
+can have a much more complex algorithm to schedul the processe since each process will use a 
+long time to execute.
+
+- mid term schedualing: decides what should be put on main memory if there isn't space to start a 
+new program, so when the swap space is full mid term schedualing handles which programs to swap.
+
+Processes are either I/O bound or CPU bound, if it is I/O bound it does some data handling from 
+e.g. hard drive, so it puts itself in the waiting queue willingly, but if they are CPU bound 
+they use the CPU and content for the CPUs time. So we would want a good mix of the two for 
+smooth and responsive processing.
+
+creating a process (clone or fork)
+- Fork - yields no sideeffects to any of the variable from the parrent
+- Clone can yield sideeffects depending on the parameters given when cloning
+
+Zombie process 
+- no parent is wating
+- Cannot be killed or gotten rid of 
+- usually has cascading termination impleneted parrent dies all children dies
+- otherwise you can attach the children of the parrent to their parrents parrent
+
+Interprocces communication (IPC) used for processes which need to communicate under execution:
+- Shared memory (mail box) - puts a message in the shared memory needs to know, when to send 
+message and to who, reciever needs to do a recieve process and take it of the shared memory.
+Can become very complicated very quickly.
+
+- Message passing - Sending message from sender to reciever 
+(micro kernals, parallel computing on large scale)
+
+Consummer producer problem
+- Porducer creates "task"
+- The consumer takes a "task" and executes / deals with it
+- repeat 
+
+MPI (message passing interface - library)
+
+Blocking send
+- Send something and wait until you get something back
+- Synchronous
+
+Non-blocking send 
+- Send do things mean while wating to get answer check if it has arrived
+- Asynchronous
+
+Buffering
+- can be there or not
+- can allow the senders data to be buffered for up to 32KB if reciever hasn't read anything 
+and the buffer fills up it will block the sender from sending more data and indicate its full
+
+Posix and systemV should be though of as specification.
+
+Shared memory a process is using is not deleted if the process is deleted. The handle for the
+allocated memory space can be given to other process. It is persistent in the memory.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

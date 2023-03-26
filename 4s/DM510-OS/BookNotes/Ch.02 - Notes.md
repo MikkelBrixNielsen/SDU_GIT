@@ -1,0 +1,1 @@
+An operating system provides an environment for the execution of programs by providing services to users and programs.
