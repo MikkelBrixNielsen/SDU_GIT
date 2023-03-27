@@ -1,13 +1,13 @@
 ---------------------------------------------Current---------------------------------------------- 
-Assignment 2
+OS assignment 2
 
 
 Haskell project
 Task 3????
 
-PS lessons (29/3)
-OS lessons (30/3)
-DM lessons (31/3)
+PS lessons exe 8-12 (29/3) - TIRSDAG->ONSDAG
+OS lessons (30/3) - TIRSDAG->TORSDAG
+DM lessons (31/3) - ONSDAG-FREDAG
 
 
 

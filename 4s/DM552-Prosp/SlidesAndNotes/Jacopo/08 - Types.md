@@ -33,9 +33,11 @@
 - No control (semantic errors may not be detected)
 ### Type equivalence
 - Two expressions have the same type
+- Both directions a -> b and b -> a
 ### Type compatibility
 - When a type is allowed in a different context
   - is 3 + 4.6 legitimate
+- One direction a -> b but not b -> a
 ### Type inference
 - How to derive the type of a composite expression
 ### Type checking
@@ -67,6 +69,11 @@
 # Categories of types
 - Scalar types (simple types): Values not composed of aggregations of other values
 - Composite types: obtained by combining other types with appropriate constructors
+
+# Conversion and casting
+- Conversion and casting are ways to change the type of a variable or value from one data type to another.
+- Conversion is the process of changing the type of a variable or value from one type to another implicitly or explicitly
+- Casting is a specific form of explicit conversion that involves converting one data type to another.
 
 # Scalar types
 ### Boolean

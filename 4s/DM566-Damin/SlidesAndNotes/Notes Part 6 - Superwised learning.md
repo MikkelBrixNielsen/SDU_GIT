@@ -129,17 +129,97 @@ As $|\mathcal{D}|$ goes to infinity both bias and variance reduces as both are e
 - Using mean value theorem entropy of a continuous density p(x) differs by $-ln \Delta$ for differential entropy![[Pasted image 20230322211223.png]]
 - Differential entropy diverges from the exact entropy as ∆ → 0, often a replacement of plain entropy for continuous densities
 
-# Relative entropy or KL divergence
+# Relative entropy or KL (Kullback-libler) divergence
 - Approximate $p(x)$ by $q(x)$ (another density more pleasant properties) additional required information in nats when using $q(x)$ instead of $p(x)$ ![[Pasted image 20230322211659.png]]
 - x following $p(x)$ suggests additional information is ![[Pasted image 20230322211722.png]]
   Relative entropy or Kullback-Leibler divergence 
 
 # Convexity
 - A line passing between f(a) and f(b) always staying above f would make f convex in that interval ![[Pasted image 20230322211943.png]]
+- The reverse is not concave but non-convex, but when the line is under the function that function can be called convex
+- the sin curve is non-convex and non-concave
+- A loss function or any other function being convex it follows that where the determinant is 0 is the best solution for minimizing the x value (GYM MATH!!)
 
+# Jensen's inequality
+![[Pasted image 20230327103819.png]]
 
+# KL divergence is a statistical distance
+![[Pasted image 20230327104835.png]]
+- KL used to see how different two values are
+- not a distance measure - divergence
 
+# Entropy of class distributions
+- Low entropy:
+  - Lower disorder
+  - minimal randomness in the represented classes
+  - low uncertainty - very predictable
+  - one classes represents almost all datapoints 
+- High entropy
+  - More disorder
+  - Maximal randomness
+  - high uncertainty - no that predictable
 
+# Gini index
+![[Pasted image 20230327105229.png]]
+- How impure is a dataset
+- Minimal impurity the Gini index would be 0, e.g. dataset with 1 class probability of that class = 1, Gini index = 0
+- Each class equally represented $Pr(c_i | D) = \frac{1}{k}$, dataset maximally impure Gini index = $\frac{k-1}{k}$
+- Probabilistic interpretation of the square: randomly draw two objects from D, how likely are they belonging to the same class
+
+# Decision tree
+  ![[Pasted image 20230327113223.png]]
+- Inner node -> test
+- edge -> result of test
+- leaf node -> class
+- Constructed top down
+- The alg. is greedy - makes bad choice that's it can't be corrected 
+  ![[Pasted image 20230327113519.png]]
+- splits to maximize purity
+
+### Types of splits
+![[Pasted image 20230327113536.png]]
+
+# Where to split?
+- where errors that would occur is smallest
+- while still maximizing separation of classes
+- or fit to each class a Gaussian distribution intersections of the Gaussian pdfs are potential split points
+
+# Quality measure for splits
+![[Pasted image 20230327113921.png]]
+
+# Measure: information Gain
+- Information gain is a measure based on the entropy.
+  ![[Pasted image 20230327114553.png]]
+- Information gain measures the reduction of entropy (i.e., gain of information) by a split of set T into partitions T1, . . . , Tm:![[Pasted image 20230327114606.png]]
+- Higher information gain means larger reduction of entropy
+- We choose the attribute and split point that maximize the information gain.
+- Wants to reduce entropy on the dataset making better predictions reducing impurity
+- Example slides 60
+
+# Measure - Gini index
+- maximize information gain minimize impurity
+  ![[Pasted image 20230327115227.png]]
+  - Example slides 64
+
+# Axis-parallel hyperplanes 
+![[Pasted image 20230327120054.png]]
+
+# Hyperplanes and split points
+- For decision trees on real-valued attributes, axis-parallel hyperplanes relate to split points.
+- A hyperplane splits the data space R d into two half-spaces.
+- All points with h(x) < 0 are on one side of the hyperplane, all points with h(x) > 0 are on the other side of the hyperplane.
+- We can therefore write the split point as: h(x) ≤ 0 ⇔ $x_i$ − b ≤ 0 ⇔ $x_i$ ≤ b
+
+# Bias axis parallel piecewise linear separation
+![[Pasted image 20230327115951.png]]
+
+# Bias prevents detection of certain simple decision rules
+![[Pasted image 20230327115933.png]]
+
+# Overfitting example
+![[Pasted image 20230327120117.png]]
+- can prevent this by making it not go to deep
+- can also be prevented by choosing the impurity
 
 
 

@@ -32,3 +32,26 @@ bool intListEqual(IntList l1, IntList l2) {
 - Well since we use struct type equivalence and struct T1 and T2 are identical in their structure the assignment of a, T3, = b, T4, would be allowed since T3 & T4's u and v variables would be considered of the same type since T1 is equivalent to T2
 
 ![[Pasted image 20230320164759.png]]
+fun g) G : (a -> a) -> a -> a
+- Or takes a function and a value x and returns f applied to x twice
+
+fun H) H : (a -> bool) -> a -> a -> a
+- takes three arguments, a predicate function t and two values x and y. If t(x) is true returns x; otherwise y. Therefore x and y must be of the same type since they are interchangeable
+
+fun K) F : a -> b -> a
+- Takes two potentially different arguments and returns the first of them
+
+
+
+![[Pasted image 20230327214651.png]]
+
+
+![[Pasted image 20230327214708.png]]
+
+![[Pasted image 20230327214717.png]]
+![[Pasted image 20230327214725.png]]
+
+
+![[Pasted image 20230327214735.png]]
+
+![[Pasted image 20230327214745.png]]
